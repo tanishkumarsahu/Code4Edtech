@@ -1,0 +1,213 @@
+{
+  "projectRules": {
+    "name": "Resume Relevance Check System - Theme 2",
+    "description": "AI-powered resume screening system with Next.js frontend and Firebase backend",
+    "codebaseStructure": {
+      "enforceModularArchitecture": true,
+      "maxFileSize": "500 lines",
+      "maxFunctionLength": "50 lines",
+      "enforceTypeScript": true,
+      "requireDocumentation": true
+    },
+    "errorHandling": {
+      "deepAnalysis": true,
+      "rootCauseAnalysis": true,
+      "preventiveDebugging": true,
+      "comprehensiveLogging": true,
+      "errorBoundaries": true
+    },
+    "bestPractices": {
+      "followReactBestPractices": true,
+      "useCustomHooks": true,
+      "componentComposition": true,
+      "immutableState": true,
+      "propTypes": "TypeScript interfaces",
+      "testCoverage": "minimum 80%"
+    },
+    "codeQuality": {
+      "eslintStrict": true,
+      "prettierFormatting": true,
+      "noConsoleInProduction": true,
+      "noUnusedImports": true,
+      "explicitReturnTypes": true,
+      "noAnyType": true
+    },
+    "security": {
+      "noHardcodedSecrets": true,
+      "validateInputs": true,
+      "sanitizeData": true,
+      "secureApiCalls": true,
+      "authenticationRequired": true
+    },
+    "performance": {
+      "lazyLoading": true,
+      "memoization": true,
+      "optimizedQueries": true,
+      "imageOptimization": true,
+      "bundleAnalysis": true
+    }
+  },
+  "fileStructure": {
+    "frontend": {
+      "path": "frontend/",
+      "framework": "Next.js 14",
+      "structure": {
+        "src/app/": "App Router pages and layouts",
+        "src/components/": "Reusable UI components",
+        "src/hooks/": "Custom React hooks",
+        "src/lib/": "Utility functions and configurations",
+        "src/types/": "TypeScript type definitions",
+        "src/utils/": "Helper functions",
+        "src/store/": "State management (Zustand)",
+        "public/": "Static assets"
+      }
+    },
+    "backend": {
+      "path": "backend/",
+      "framework": "Flask/FastAPI",
+      "structure": {
+        "app/": "Main application code",
+        "app/models/": "Data models",
+        "app/services/": "Business logic",
+        "app/utils/": "Utility functions",
+        "app/config/": "Configuration files",
+        "tests/": "Test files"
+      }
+    },
+    "shared": {
+      "docs/": "Documentation",
+      "scripts/": "Build and deployment scripts",
+      ".github/": "GitHub workflows",
+      "firebase/": "Firebase configuration"
+    }
+  },
+  "namingConventions": {
+    "files": {
+      "components": "PascalCase (e.g., ResumeUpload.tsx)",
+      "pages": "kebab-case (e.g., resume-analysis.tsx)",
+      "hooks": "camelCase starting with 'use' (e.g., useAuth.ts)",
+      "utils": "camelCase (e.g., formatScore.ts)",
+      "types": "PascalCase (e.g., User.ts)",
+      "constants": "UPPER_SNAKE_CASE (e.g., API_ENDPOINTS.ts)"
+    },
+    "variables": {
+      "components": "PascalCase",
+      "functions": "camelCase",
+      "constants": "UPPER_SNAKE_CASE",
+      "interfaces": "PascalCase with 'I' prefix (e.g., IUser)",
+      "types": "PascalCase with 'T' prefix (e.g., TStatus)"
+    }
+  },
+  "gitRules": {
+    "commitMessage": {
+      "format": "type(scope): description",
+      "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore"],
+      "maxLength": 72,
+      "requireBody": true
+    },
+    "branchNaming": {
+      "format": "type/description",
+      "types": ["feature", "bugfix", "hotfix", "release"],
+      "example": "feature/resume-upload-component"
+    },
+    "pullRequests": {
+      "requireReview": true,
+      "requireTests": true,
+      "requireDocumentation": true,
+      "templateRequired": true
+    }
+  },
+  "testing": {
+    "framework": "Jest + React Testing Library",
+    "coverage": {
+      "minimum": 80,
+      "statements": 80,
+      "branches": 75,
+      "functions": 80,
+      "lines": 80
+    },
+    "testTypes": {
+      "unit": "Individual component/function testing",
+      "integration": "API and component integration",
+      "e2e": "Full user workflow testing"
+    }
+  },
+  "deployment": {
+    "frontend": {
+      "platform": "Vercel",
+      "buildCommand": "npm run build",
+      "environmentVariables": "Required for Firebase config"
+    },
+    "backend": {
+      "platform": "Google Cloud Run",
+      "containerization": "Docker required",
+      "environmentVariables": "Required for Firebase Admin SDK"
+    }
+  },
+  "debugging": {
+    "serverManagement": {
+      "CRITICAL_RULE": "NEVER restart the development server unless explicitly requested",
+      "devServerBehavior": {
+        "autoReload": "Next.js has hot reload - changes are automatically reflected",
+        "environmentChanges": "Only restart for .env changes or major config updates",
+        "normalEdits": "Code changes, component updates, and most modifications do NOT require server restart",
+        "avoidCommands": "Do not run 'npm run dev' repeatedly - server runs continuously"
+      }
+    },
+    "errorAnalysis": {
+      "steps": [
+        "1. Reproduce the error consistently",
+        "2. Check browser console and network tab",
+        "3. Verify Firebase configuration and rules",
+        "4. Check API endpoint responses",
+        "5. Analyze component state and props",
+        "6. Review recent code changes",
+        "7. Test with different data sets",
+        "8. Check environment variables",
+        "9. Verify database permissions",
+        "10. Document the fix and prevention"
+      ]
+    },
+    "commonIssues": {
+      "firebaseAuth": "Check API keys and domain configuration",
+      "firestoreRules": "Verify security rules and user permissions",
+      "apiCalls": "Check CORS, authentication headers, and rate limits",
+      "stateManagement": "Verify state updates and component re-renders",
+      "routing": "Check Next.js routing and middleware",
+      "buildErrors": "Verify TypeScript types and import paths"
+    }
+  },
+  "codeReview": {
+    "checklist": [
+      "Code follows established patterns",
+      "TypeScript types are properly defined",
+      "Error handling is comprehensive",
+      "Security best practices followed",
+      "Performance optimizations applied",
+      "Tests are written and passing",
+      "Documentation is updated",
+      "No console.log statements in production",
+      "Accessibility standards met",
+      "Mobile responsiveness verified"
+    ]
+  },
+  "hackathonSpecific": {
+    "timeline": {
+      "start": "2025-09-20 11:00 AM IST",
+      "deadline": "2025-09-21 2:00 PM IST",
+      "milestones": {
+        "day1_evening": "Authentication and basic UI completed",
+        "day2_morning": "Core functionality implemented",
+        "day2_noon": "Testing and deployment completed",
+        "day2_deadline": "Final submission with video"
+      }
+    },
+    "priorities": [
+      "1. Core functionality first",
+      "2. User experience second",
+      "3. Advanced features last",
+      "4. Documentation throughout",
+      "5. Testing continuously"
+    ]
+  }
+}

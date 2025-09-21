@@ -1,0 +1,132 @@
+{
+  "workspace": {
+    "name": "Resume Relevance Check System",
+    "type": "hackathon-project",
+    "theme": "AI Automation - Theme 2",
+    "deadline": "2025-09-21T14:00:00+05:30"
+  },
+  "ai": {
+    "codeGeneration": {
+      "enforceTypeScript": true,
+      "followProjectRules": true,
+      "generateTests": true,
+      "addDocumentation": true,
+      "optimizePerformance": true
+    },
+    "errorAnalysis": {
+      "deepAnalysis": true,
+      "rootCauseIdentification": true,
+      "preventiveSuggestions": true,
+      "contextualDebugging": true
+    },
+    "codeReview": {
+      "automaticReview": true,
+      "securityCheck": true,
+      "performanceCheck": true,
+      "bestPracticesCheck": true
+    }
+  },
+  "editor": {
+    "formatOnSave": true,
+    "lintOnSave": true,
+    "autoImport": true,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "trimTrailingWhitespace": true,
+    "insertFinalNewline": true
+  },
+  "typescript": {
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true
+  },
+  "eslint": {
+    "enable": true,
+    "autoFixOnSave": true,
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-console": "warn",
+      "prefer-const": "error"
+    }
+  },
+  "prettier": {
+    "enable": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "printWidth": 80,
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "git": {
+    "autoStage": false,
+    "autoCommit": false,
+    "commitMessageTemplate": "type(scope): description\n\n- Detailed changes\n- Impact on system\n- Testing done",
+    "enforceConventionalCommits": true
+  },
+  "debugging": {
+    "enableSourceMaps": true,
+    "showErrorOverlay": true,
+    "logLevel": "verbose",
+    "breakOnExceptions": true,
+    "enableHotReload": true,
+    "serverManagement": {
+      "CRITICAL_RULE": "Development server runs continuously - DO NOT restart after edits",
+      "hotReloadEnabled": true,
+      "autoRestartOnlyFor": [".env changes", "major config updates", "explicit user request"]
+    }
+  },
+  "performance": {
+    "enableBundleAnalyzer": true,
+    "optimizeImages": true,
+    "enableCodeSplitting": true,
+    "enableTreeShaking": true,
+    "minimizeBundle": true
+  },
+  "security": {
+    "scanDependencies": true,
+    "checkSecrets": true,
+    "validateEnvironmentVars": true,
+    "enforceHTTPS": true
+  },
+  "testing": {
+    "runOnSave": false,
+    "showCoverage": true,
+    "watchMode": true,
+    "parallelExecution": true
+  },
+  "deployment": {
+    "autoPreview": true,
+    "environmentChecks": true,
+    "buildOptimization": true,
+    "healthChecks": true
+  },
+  "notifications": {
+    "buildErrors": true,
+    "testFailures": true,
+    "deploymentStatus": true,
+    "securityAlerts": true
+  },
+  "fileWatcher": {
+    "exclude": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.next/**",
+      "**/coverage/**",
+      "**/.git/**"
+    ]
+  },
+  "autoSave": {
+    "enable": true,
+    "delay": 1000,
+    "onFocusChange": true,
+    "onWindowChange": true
+  }
+}
